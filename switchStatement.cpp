@@ -40,7 +40,11 @@ int main() {
         case WINTER:
             cout << "It's winter, stay warm." << endl;
             break;
-    }
+
+        default:
+            cout << "Unknown season!" << endl;
+            break;
+        }
 
     return 0;
 }
