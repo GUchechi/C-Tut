@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    
-    string greeting = "Hello";
-    string complete_greeting = greeting + " World!";
-    cout << complete_greeting << endl;
+int main()
+{
 
+    string greeting;
+    cout << "Enter a greeting: ";
+    cin >> greeting;
+    cout << greeting;
 
-    
 
     return 0;
 }
