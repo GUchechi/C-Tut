@@ -16,7 +16,8 @@ int main()
     cout << "Guess my age:" << endl;
     cin >> age_guess;
 
-    if (name_guess == name_answer && age_guess == age_answer)
+    if (name_guess == name_answer &&
+        age_guess == age_answer)
     {
         cout << "You got it Correct!" << endl;
     }
