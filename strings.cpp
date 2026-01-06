@@ -12,9 +12,10 @@ int main()
     // greeting.erase(greeting.length() - 1);
     // greeting.pop_back();
     // getline(cin, greeting);
-    
-    cout << greeting;
+    // greeting.replace(0, 5, "Hi");
+    greeting.replace(greeting.find("World"), 5, "C++");
 
+    cout << greeting;
 
     return 0;
 }
