@@ -6,7 +6,7 @@ int main()
 
     string greeting;
     cout << "Enter a greeting: ";
-    cin >> greeting;
+    getline(cin, greeting);
     cout << greeting;
 
 
