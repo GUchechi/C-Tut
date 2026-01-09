@@ -7,7 +7,7 @@ using namespace std;
 void playGame()
 {
     int random = rand() % 251; // Random number between 0 and 250
-    cout << "Random number generated: " << random << endl;
+    // cout << "Random number generated: " << random << endl;
 
     while (true)
     {
