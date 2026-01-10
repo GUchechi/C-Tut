@@ -8,6 +8,7 @@ void print_array(int arr[], int size)
     {
         cout << arr[i] << "\t";
     }
+    cout << endl;
 }
 
 int main()
@@ -37,5 +38,7 @@ int main()
     
     cin.clear(); // Clear any error flags
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+
+    return 0;
 
 }
