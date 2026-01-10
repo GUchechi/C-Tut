@@ -4,16 +4,33 @@ using namespace std;
 #include <cstdlib>
 #include <ctime>
 
+void print_array(int arr[], int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        cout << arr[i] << "\t";
+    }
+    cout << endl;
+}
+
 void playGame()
 {
+    cout << "Welcome to the Number Guessing Game!\n";
+
+    // Generate a random number between 0 and 250
+    int guesses[250];
+    int guessCount = 0;
+
     int random = rand() % 251; // Random number between 0 and 250
-    // cout << "Random number generated: " << random << endl;
+    cout << "Random number generated: " << random << endl;
 
     while (true)
     {
         int guess;
         cout << "Enter your guess (0-250): ";
         cin >> guess;
+
+        guesses[guessCount++] = guess;
 
         if (guess < 0 || guess > 250)
         {
@@ -35,6 +52,8 @@ void playGame()
             break;
         }
     }
+
+    print_array(guesses, guessCount);
 }
 
 int main()
