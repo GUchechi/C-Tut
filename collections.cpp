@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <limits>
 
 void print_array(int arr[], int size)
 {
@@ -15,10 +16,14 @@ int main()
     int guesses[SIZE];
     // int size = sizeof(guesses) / sizeof(guesses[0]);
 
+    int count = 0;
+    cout << "Enter " << SIZE << " integers: " << endl;
+
     for (int i = 0; i < SIZE; i++)
     {
       if  (cin >> guesses[i]) {
         // Successfully read an integer
+        count++;
       } else {
         // Failed to read an integer
         cout << "Invalid input. Please enter integers only." << endl;
@@ -26,7 +31,8 @@ int main()
       }
     }
 
-    print_array(guesses, SIZE);
+    print_array(guesses, count);
+    cin.clear(); // Clear any error flags
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
 
-    return 0;
 }
