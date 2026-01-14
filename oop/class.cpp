@@ -49,12 +49,15 @@ int main()
     users.push_back(user3);
 
     User new_user;
-    new_user.first_name = "John";
+    new_user.first_name = "Joy";
     new_user.last_name = "Smith";
 
     if (add_user_if_not_exists(users, new_user))
     {
-        cout << "User added. Total users: " << users.size() << endl;
+        for(size_t i = 0; i < users.size(); i++)
+        {
+            cout << users[i].first_name << " " << users[i].last_name << endl;
+        }
     }
     else
     {
